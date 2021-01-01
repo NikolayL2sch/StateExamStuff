@@ -16,7 +16,7 @@ else:
     splm = 10e20
     for i in range(0,len(t)-1,2):
         spl = abs(t[i]-t[i+1])
-        if spl<splm and (s + spl)%3!=0:
+        if spl<splm and (s + spl)%5!=0:
             splm = spl
-    print(s+splm) 
+    print(s-splm) 
 f.close()
