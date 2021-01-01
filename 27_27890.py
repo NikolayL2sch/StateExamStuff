@@ -18,5 +18,5 @@ else:
         spl = abs(t[i]-t[i+1])
         if spl<splm and (s + spl)%3!=0:
             splm = spl
-    print(s+splm) 
+    print(s-splm) 
 f.close()
