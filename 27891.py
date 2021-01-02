@@ -1,22 +1,20 @@
-f = open('text.txt')
+f = open('C:/Users/nikol_000/Desktop/random/text2.txt')
 
 n = int(f.readline())
 t = []
-s = 0
+mulm = 0
+
 
 for i in range (n):
-    a,b = map(int,f.readline().split)
-    t.append(a)
-    t.append(b)
-for i in range(0,len(t)-1,2):
-    s+=min(t[i],t[i+1])
-if s%3!=0:
-    print(s)
-else:
-    splm = 10e20
-    for i in range(0,len(t)-1,2):
-        spl = abs(t[i]-t[i+1])
-        if spl<splm and (s + spl)%3!=0:
-            splm = spl
-    print(s+splm) 
+    a = int(f.readline())
+    if a%7 == 0 or a%2 == 0 or a == max(t):
+        t.append(a)
+    j = len(t)-1
+    while j!=0:
+        mul = t[j]*t[j-1]
+        print(mul)
+        if mul>mulm and mul%14 == 0:
+                mulm = mul     
+        j-=1
+print(mulm)
 f.close()
